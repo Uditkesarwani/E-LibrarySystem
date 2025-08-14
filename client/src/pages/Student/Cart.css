@@ -1,0 +1,13 @@
+.cartContainer{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    gap: 1rem;
+}
+
+.cart{
+    border: 2px black solid;
+    padding: 2rem;
+    text-align: start;
+    border-radius: 2rem;
+}
