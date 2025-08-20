@@ -19,7 +19,7 @@ const AuthenticationRoute = require('./routes/AuthenticationRoute')
 const StudentOprationRoute = require('./routes/StudentOprationRoute')
 const AdminOprationsRoute  = require('./routes/AdminOprationsRoute')
 
-app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+
 
 mongoose
   .connect(mongoURI)
@@ -29,7 +29,7 @@ mongoose
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
